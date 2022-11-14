@@ -11,8 +11,6 @@ function playerInput() {
 }
 
 function playRound(playerSelection,computerSelection) {
-    let playerSelection = playerInput();
-    let computerSelection = getComputerChoice();
 
     if(computerSelection == playerSelection) {
         alert(`Computer had ${computerSelection} & you had ${playerSelection}. It's a draw!`)
