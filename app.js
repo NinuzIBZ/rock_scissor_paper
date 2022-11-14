@@ -48,5 +48,14 @@ function game() {
     winner(playerScore,computerScore)
 }
 
+function winner() {
+    if(playerScore > computerScore) {
+        alert('You win!')
+    }
+    else {
+        alert('You lost!')
+    }
+}
+
 
 
