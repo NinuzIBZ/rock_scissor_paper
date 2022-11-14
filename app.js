@@ -23,6 +23,8 @@ function playRound(playerSelection,computerSelection) {
     else if(playerSelection == 'rock' && computerSelection == 'scissor' || playerSelection == 'scissor' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock' ) {
         return alert(`Computer had ${computerSelection} & you had ${playerSelection}. You win!`)
     }
+
+    alert('You wrote some bullshit nub!')
 }
 
 //playRound()
@@ -41,14 +43,14 @@ function game() {
             computerScore++
         }
         else {
-            i--
+            i
         }
     }
 
     winner(playerScore,computerScore)
 }
 
-function winner() {
+function winner(playerScore,computerScore) {
     if(playerScore > computerScore) {
         alert('You win!')
     }
