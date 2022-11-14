@@ -11,3 +11,8 @@ That will be added later in the course.
 1. How to declare variables
 2. How to create functions
 3. and more...
+
+### TODO list
+
+- Fix prompt triggering 2 times
+- Fix variables in winner function that are not properly readed
