@@ -25,4 +25,28 @@ function playRound(playerSelection,computerSelection) {
     }
 }
 
+//playRound()
+
+function game() {
+    let playerScore = 0
+    let computerScore = 0
+    for(let i = 0; i < 5; i++) {
+        const computerSelection = getComputerChoice()
+        const playerSelection = playerInput()
+        let winner = playRound(playerSelection,computerSelection)
+        if(winner === 'playerScore') {
+            playerScore++
+        }
+        else if(winner === 'computerScore') {
+            computerScore++
+        }
+        else {
+            i--
+        }
+    }
+
+    winner(playerScore,computerScore)
+}
+
+
 
