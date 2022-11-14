@@ -13,4 +13,16 @@ function playerInput() {
     return playerChoice.toLowerCase()
 }
 
+function playRound(playerSelection,computerSelection) {
+    if(computerSelection == playerSelection) {
+        return alert(`Computer had ${computerSelection} & you had ${playerSelection}. It's a draw!`)
+    }
+    else if(computerSelection == 'rock' && playerSelection == 'scissor' || computerSelection == 'scissor' && playerSelection == 'paper' || computerSelection == 'paper' && playerSelection == 'rock' ) {
+        return alert(`Computer had ${computerSelection} & you had ${playerSelection}. You lost!`)
+    }
+    else if(playerSelection == 'rock' && computerSelection == 'scissor' || playerSelection == 'scissor' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'rock' ) {
+        return alert(`Computer had ${computerSelection} & you had ${playerSelection}. You win!`)
+    }
+}
+
 
