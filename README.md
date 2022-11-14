@@ -14,5 +14,3 @@ That will be added later in the course.
 
 ### TODO list
 
-- Fix prompt triggering 2 times
-- Fix variables in winner function that are not properly readed
