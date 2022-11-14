@@ -1,7 +1,7 @@
 const options = ['rock','scissor','paper']
 
-let playerSelection = playerInput()
-let computerSelection = getComputerChoice()
+let playerSelection = playerInput();
+let computerSelection = getComputerChoice();
 
 function getComputerChoice() {
     let computerChoice = options[Math.floor(Math.random() * options.length)]
@@ -52,13 +52,13 @@ function game() {
 
 function winner(playerScore,computerScore) {
     if(playerScore > computerScore) {
-        alert('You win!')
+        alert(`You Win with ${playerScore} round`)
     }
     else {
-        alert('You lost!')
+        alert(`You lost! Computer won ${computerScore}`)
     }
 }
 
-game()
-winner()
+game();
+winner();
 
