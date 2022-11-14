@@ -57,5 +57,6 @@ function winner() {
     }
 }
 
-
+game()
+winner()
 
