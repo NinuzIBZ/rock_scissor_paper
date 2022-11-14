@@ -52,10 +52,10 @@ function game() {
 
 function winner(playerScore,computerScore) {
     if(playerScore > computerScore) {
-        alert(`You Win with ${playerScore} round`)
+        alert('You Win!')
     }
     else {
-        alert(`You lost! Computer won ${computerScore}`)
+        alert('You Lost!')
     }
 }
 
