@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'Lilita One', cursive;
+    font-size: 18px;
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px;
+    padding: 80px;
+}
+
+.card {
+    margin: 20px;
+    background-color: brown;
+    height: 240px;
+    width: 160px;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Lilita One';
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.btn {
+    display: flex;
+    gap: 5px;
+}

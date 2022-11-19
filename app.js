@@ -65,5 +65,5 @@ function winner(playerScore,computerScore) {
     }
 }
 
-game();
+//game();
 
