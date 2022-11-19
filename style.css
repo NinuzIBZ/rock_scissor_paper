@@ -13,7 +13,6 @@ h1, h2 {
 }
 
 .container {
-    background-color: rebeccapurple;
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -21,10 +20,13 @@ h1, h2 {
     padding: 80px;
 }
 
+img {
+    max-height: 240px;
+    max-width: 160px;   
+}
 .card {
-    margin: 20px;
-    background-color: brown;
-    height: 240px;
+    margin: 30px;
+    height: 180px;
     width: 160px;
 }
 
@@ -36,15 +38,20 @@ button {
     box-sizing: border-box;
     font-size: 16px;
     font-family: 'Lilita One';
+    align-items: center;
 }
 
 button:hover {
     color: white;
-    background-color: black;
+    background-color: #09c;
     transform: scale(1.1);
 }
 
 .btn {
     display: flex;
     gap: 5px;
+    margin: 4px;
+}
+
+.comp-btn {
 }
