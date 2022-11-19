@@ -1,3 +1,15 @@
+const rock = document.querySelector('.rock');
+const scissor = document.querySelector('.scissor');
+const paper = document.querySelector('.paper');
+
+rock.addEventListener('click', function() {
+    console.log('rock')
+});
+
+
+
+
+
 const options = ['rock','scissor','paper']
 
 function getComputerChoice() {
