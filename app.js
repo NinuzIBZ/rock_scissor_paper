@@ -59,13 +59,11 @@ function playRound(playerSelection,computerSelection) {
 
 function winner() {
     if(playerScore === 5) {
-        cScore.innerText = playerScore;
+        pScore.innerText = playerScore;
         alert('YOU WIN!');
-        resetRound();
     } else if(computerScore === 5) {
-        pScore.innerText = computerScore;
+        cScore.innerText = computerScore;
         alert('YOU LOST!');
-        resetRound();
     }
 }
 
