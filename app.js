@@ -27,23 +27,6 @@ function getPlayerChoice() {
     console.log(`${playerSelection} & ${computerSelection}`);
 }
 
-//rock.addEventListener('click', getPlayerChoice)
-
-//rock.addEventListener('click', function() {
-//    playRound('rock',getComputerChoice());
-//    console.log(playRound('rock'),getComputerChoice())
-//});
-
-//scissor.addEventListener('click', function() {
-//    playRound('scissor',getComputerChoice());
-//    console.log(playRound(),getComputerChoice())
-//});
-
-//paper.addEventListener('click', function() {
-//    playRound('paper',getComputerChoice());
-//    console.log(playRound(),getComputerChoice())
-//});
-
 computer.addEventListener('click', function() {
     alert('I do my own things! Dont you worry!')
 })
@@ -59,7 +42,6 @@ function playRound(playerSelection,computerSelection) {
         (computerSelection == 'scissor' && playerSelection == 'paper') || 
         (computerSelection == 'paper' && playerSelection == 'rock') 
     ) {
-        //display the result on the div.
         computerScore++;
         cScore.innerText = computerScore;
         roundWinner = 'computer';
@@ -68,7 +50,6 @@ function playRound(playerSelection,computerSelection) {
         (playerSelection == 'scissor' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'rock') 
     ) {
-        //display the result on the div.
         playerScore++;
         pScore.innerText = playerScore;
         roundWinner = 'player';
@@ -94,37 +75,3 @@ function resetRound() {
 }
 
 rstButton.addEventListener('click', resetRound);
-
-//function game() {//
-//    let playerScore = 0
-//    let computerScore = 0
-//
-//    for(let i = 0; i < 5; i++) {
-//        const computerSelection = getComputerChoice()
-//        const playerSelection = playerInput()
-//
-//        let winner = playRound(playerSelection,computerSelection)
-//
-//        if(winner === 'playerScore') {
-//            playerScore++
-//        }
-//        else if(winner === 'computerScore') {
-//            computerScore++
-//        }
-//    }
-//
-//    winner(playerScore,computerScore)
-//}
-
-//function winner(playerScore,computerScore) {
-//    if(playerScore > computerScore) {
-//        alert('You Win!');
-//    } else if (computerScore > playerScore) {
-//        alert('You Lost!')
-//    } else {
-//        alert('Draw!')
-//    }
-//}
-
-//game();
-
