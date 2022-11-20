@@ -28,7 +28,7 @@ function getPlayerChoice() {
 }
 
 computer.addEventListener('click', function() {
-    alert('I do my own things! Dont you worry!');
+    alert('Mind your business!');
 },
 { once: true });
 
