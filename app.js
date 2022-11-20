@@ -28,8 +28,10 @@ function getPlayerChoice() {
 }
 
 computer.addEventListener('click', function() {
-    alert('I do my own things! Dont you worry!')
-})
+    alert('I do my own things! Dont you worry!');
+},
+{ once: true });
+
 let playerScore = parseInt(document.querySelector('.player-score').innerHTML);
 let computerScore = parseInt(document.querySelector('.computer-score').innerHTML);
 
