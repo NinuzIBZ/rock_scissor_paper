@@ -1,3 +1,5 @@
+const player = document.querySelector('.player-name')
+
 const rock = document.getElementById('rock');
 const scissor = document.getElementById('scissor');
 const paper = document.getElementById('paper');
@@ -10,6 +12,17 @@ const cScore = document.querySelector('.computer-score');
 const rstButton = document.querySelector('.reset')
 
 const options = ['rock','scissor','paper']
+
+function getName() {
+    let pName = 'Player Name';
+        pName = prompt("Hi there! What's your name?");
+    if(pName === null) {
+        player.innerText = 'No Name';
+    } else {
+        player.innerText = pName;
+    }
+};
+getName();
 
 function getComputerChoice() {
     let computerChoice = options[Math.floor(Math.random() * options.length)]

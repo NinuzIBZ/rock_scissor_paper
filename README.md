@@ -17,4 +17,3 @@ That will be added later in the course.
 - add Modal instead of alert to display winner.
 - animate h2 text
 - animate card
-- ask user for name and pass it to 'Player name" div.
