@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 body {
-    background-color: black;
+    background-color: grey;
     font-family: 'Lilita One', cursive;
     font-size: 18px;
     color: white;
@@ -11,6 +11,7 @@ body {
 h1, h2 {
     text-align: center;
     color: white;
+    text-shadow: 5px 5px black;
 }
 
 .container {
@@ -77,6 +78,7 @@ button:hover {
     justify-content: center;
     padding: 40px;
     font-size: 60px;
+    text-shadow: 5px 5px black;
 }
 
 footer {
@@ -89,6 +91,7 @@ footer {
 a {
     text-decoration: none;
     color: white;
+    font-size: 20px;
 }
 
 a:hover {
