@@ -16,8 +16,8 @@ h1, h2 {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin: 20px;
-    padding: 80px;
+    margin-top: 20px;
+    padding: 40px;
 }
 
 img {
@@ -51,4 +51,18 @@ button:hover {
     display: flex;
     gap: 5px;
     margin: 4px;
+}
+
+.player-score, .computer-score {
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+.reset-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.reset {
+    padding: 12px 24px;
 }
