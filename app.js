@@ -44,7 +44,6 @@ function playRound(playerSelection,computerSelection) {
     ) {
         computerScore++;
         cScore.innerText = computerScore;
-        roundWinner = 'computer';
     } else if (
         (playerSelection == 'rock' && computerSelection == 'scissor') || 
         (playerSelection == 'scissor' && computerSelection == 'paper') ||
@@ -52,18 +51,19 @@ function playRound(playerSelection,computerSelection) {
     ) {
         playerScore++;
         pScore.innerText = playerScore;
-        roundWinner = 'player';
     }
     winner()
 }
 
 function winner() {
     if(playerScore === 5) {
-        alert('You Win!');
-        return resetRound();
+        cScore.innerText = playerScore;
+        alert('YOU WIN!');
+        resetRound();
     } else if(computerScore === 5) {
-        alert('You Lost!');
-        return resetRound();
+        pScore.innerText = computerScore;
+        alert('YOU LOST!');
+        resetRound();
     }
 }
 
