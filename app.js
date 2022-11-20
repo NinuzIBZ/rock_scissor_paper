@@ -83,7 +83,7 @@ function winner() {
         printScore.innerText = 'YOU WIN!';
         setTimeout(() => {
             printScore.innerText = 'PRESS RESET TO START A NEW ROUND!' 
-        }, 300);
+        }, 1000);
     } else if(computerScore === 5) {
         rock.disabled = 'disabled';
         scissor.disabled = 'disabled';
@@ -93,7 +93,7 @@ function winner() {
         printScore.innerText = 'YOU LOST!';
         setTimeout(() => {
             printScore.innerText = 'PRESS RESET TO START A NEW ROUND!'
-        }, 300);
+        }, 1000);
     }
 }
 
@@ -102,6 +102,11 @@ function resetRound() {
     pScore.innerText = 0;
     computerScore = 0;
     cScore.innerText = 0;
+    printScore.innerText = '';
+    rock.disabled = false;
+    scissor.disabled = false;
+    paper.disabled = false;
+    computer.disabled = false;
 }
 
 rstButton.addEventListener('click', resetRound);
