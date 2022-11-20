@@ -5,6 +5,7 @@ const computer = document.querySelector('.comp');
 const container = document.querySelector('.container')
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
+const rstButton = document.querySelector('.reset')
 
 const options = ['rock','scissor','paper']
 
@@ -38,8 +39,7 @@ function playRound(playerSelection,computerSelection) {
     let computerScore = parseInt(document.querySelector('.computer-score').innerHTML);
 
     if(computerSelection == playerSelection) {
-        roundWinner = 'tie';
-        alert('Was a Tie! Keep going!')
+        return;
     } else if(
         (computerSelection == 'rock' && playerSelection == 'scissor') || 
         (computerSelection == 'scissor' && playerSelection == 'paper') || 
@@ -60,6 +60,15 @@ function playRound(playerSelection,computerSelection) {
         roundWinner = 'player';
     }
 }
+
+function resetRound() {
+    playerScore = 0;
+    pScore.innerText = 0;
+    computerScore = 0;
+    cScore.innerText = 0;
+}
+
+rstButton.addEventListener('click', resetRound());
 
 function game() {
     let playerScore = 0
