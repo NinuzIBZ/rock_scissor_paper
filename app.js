@@ -3,7 +3,8 @@ const scissor = document.getElementById('scissor');
 const paper = document.getElementById('paper');
 
 const computer = document.querySelector('.comp');
-//const container = document.querySelector('.container')
+const container = document.querySelector('.container')
+
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
 const rstButton = document.querySelector('.reset')
@@ -46,13 +47,13 @@ function getPlayerChoice() {
 computer.addEventListener('click', function() {
     alert('I do my own things! Dont you worry!')
 })
+let playerScore = parseInt(document.querySelector('.player-score').innerHTML);
+let computerScore = parseInt(document.querySelector('.computer-score').innerHTML);
 
 function playRound(playerSelection,computerSelection) {
 
-    let playerScore = parseInt(document.querySelector('.player-score').innerHTML);
-    let computerScore = parseInt(document.querySelector('.computer-score').innerHTML);
-
     if(computerSelection == playerSelection) {
+
         return;
     } else if(
         (computerSelection == 'rock' && playerSelection == 'scissor') || 
@@ -72,6 +73,14 @@ function playRound(playerSelection,computerSelection) {
         playerScore++;
         pScore.innerText = playerScore;
         roundWinner = 'player';
+    }
+    winner()
+}
+
+function winner() {
+    if(playerScore === 5) {
+        alert('You Win!')
+        return resetRound();
     }
 }
 
