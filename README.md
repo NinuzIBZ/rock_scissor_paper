@@ -14,7 +14,6 @@ That will be added later in the course.
 
 ### TODO list
 
-- winner function should display 5 before resetting.
 - add Modal instead of alert to display winner.
 - animate h2 text
 - animate card
