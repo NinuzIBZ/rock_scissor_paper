@@ -60,10 +60,14 @@ function playRound(playerSelection,computerSelection) {
 function winner() {
     if(playerScore === 5) {
         pScore.innerText = playerScore;
-        alert('YOU WIN!');
+        setTimeout(() => {
+            alert('YOU WIN');
+        }, 200);
     } else if(computerScore === 5) {
         cScore.innerText = computerScore;
-        alert('YOU LOST!');
+        setTimeout(() => {
+            alert('YOU LOST');
+        }, 200);
     }
 }
 
