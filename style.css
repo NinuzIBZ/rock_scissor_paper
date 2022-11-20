@@ -75,7 +75,7 @@ button:hover {
 .score {
     display: flex;
     justify-content: center;
-    padding: 60px;
+    padding: 40px;
     font-size: 60px;
 }
 
@@ -83,7 +83,7 @@ footer {
     padding: 20px;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 5px;
 }
 
 a {
