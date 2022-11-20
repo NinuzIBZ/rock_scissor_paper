@@ -52,8 +52,7 @@ let computerScore = parseInt(document.querySelector('.computer-score').innerHTML
 
 function playRound(playerSelection,computerSelection) {
 
-    if(computerSelection == playerSelection) {
-
+    if(computerSelection == playerSelection) {    
         return;
     } else if(
         (computerSelection == 'rock' && playerSelection == 'scissor') || 
@@ -79,7 +78,10 @@ function playRound(playerSelection,computerSelection) {
 
 function winner() {
     if(playerScore === 5) {
-        alert('You Win!')
+        alert('You Win!');
+        return resetRound();
+    } else if(computerScore === 5) {
+        alert('You Lost!');
         return resetRound();
     }
 }
