@@ -69,3 +69,10 @@ button:hover {
 .reset {
     padding: 12px 24px;
 }
+
+.score {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    font-size: 60px;
+}

@@ -10,6 +10,7 @@ const container = document.querySelector('.container')
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
 const rstButton = document.querySelector('.reset')
+const printScore = document.querySelector('.score')
 
 const options = ['rock','scissor','paper']
 
@@ -22,7 +23,7 @@ function getName() {
         player.innerText = pName;
     }
 };
-getName();
+//getName();
 
 function getComputerChoice() {
     let computerChoice = options[Math.floor(Math.random() * options.length)]
@@ -37,7 +38,6 @@ function getPlayerChoice() {
     let playerSelection = this.id
     let computerSelection = getComputerChoice();
     playRound(playerSelection,computerSelection);
-    console.log(`${playerSelection} & ${computerSelection}`);
 }
 
 computer.addEventListener('click', function() {
@@ -51,6 +51,7 @@ let computerScore = parseInt(document.querySelector('.computer-score').innerHTML
 function playRound(playerSelection,computerSelection) {
 
     if(computerSelection == playerSelection) {    
+        printScore.innerText = `Tie! You had ${playerSelection} & Computer ${computerSelection}`
         return;
     } else if(
         (computerSelection == 'rock' && playerSelection == 'scissor') || 
@@ -59,6 +60,7 @@ function playRound(playerSelection,computerSelection) {
     ) {
         computerScore++;
         cScore.innerText = computerScore;
+        printScore.innerText = `Ops! ${computerSelection} beat ${playerSelection}. You lost!`
     } else if (
         (playerSelection == 'rock' && computerSelection == 'scissor') || 
         (playerSelection == 'scissor' && computerSelection == 'paper') ||
@@ -66,21 +68,32 @@ function playRound(playerSelection,computerSelection) {
     ) {
         playerScore++;
         pScore.innerText = playerScore;
+        printScore.innerText = `Lucky Man! ${playerSelection} beat ${computerSelection}. You Win!`
     }
     winner()
 }
 
 function winner() {
     if(playerScore === 5) {
+        rock.disabled = 'disabled';
+        scissor.disabled = 'disabled';
+        paper.disabled = 'disabled';
+        computer.disabled = 'disabled';
         pScore.innerText = playerScore;
+        printScore.innerText = 'YOU WIN!';
         setTimeout(() => {
-            alert('YOU WIN');
-        }, 200);
+            printScore.innerText = 'PRESS RESET TO START A NEW ROUND!' 
+        }, 300);
     } else if(computerScore === 5) {
+        rock.disabled = 'disabled';
+        scissor.disabled = 'disabled';
+        paper.disabled = 'disabled';
+        computer.disabled = 'disabled';
         cScore.innerText = computerScore;
+        printScore.innerText = 'YOU LOST!';
         setTimeout(() => {
-            alert('YOU LOST');
-        }, 200);
+            printScore.innerText = 'PRESS RESET TO START A NEW ROUND!'
+        }, 300);
     }
 }
 
