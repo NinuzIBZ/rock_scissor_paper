@@ -17,3 +17,7 @@ That will be added later in the course.
 - add Modal instead of alert to display winner.
 - animate h2 text
 - animate card
+
+### Live Preview
+
+https://ninuzibz.github.io/rock_scissor_paper/
